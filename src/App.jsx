@@ -9,6 +9,7 @@ import FeedbackPage from "./pages/FeedbackPage";
 import Chatbot from "./components/Chatbot";
 import About from "./pages/About";
 import FeaturesPage from "./pages/Features";
+import Team from "./pages/Team";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/feedback" element={<FeedbackPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/feature" element={<FeaturesPage />} />
+        <Route path="/team" element={<Team />} />
 
         <Route
           path="/dashboard"

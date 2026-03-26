@@ -13,7 +13,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const navLinks = ['Home', 'About', 'Feature', 'Feedback']
+  const navLinks = ['Home', 'About', 'Feature', 'Feedback', 'Team']
 
   const getHref = (link) => (link === 'Home' ? '/' : `/${link.toLowerCase()}`)
 
@@ -40,7 +40,7 @@ const Navbar = () => {
 
             <div className="flex flex-col leading-tight">
 
-              <span className="text-lg font-extrabold text-green-700 uppercase tracking-[0.12em]" style={{ fontFamily: "'Georgia', serif" }}>GreenHand</span>
+              <span className="text-lg font-extrabold text-green-700 tracking-[0.12em]" style={{ fontFamily: "'Georgia', serif" }}>GreenHand</span>
 
             </div>
 
@@ -95,7 +95,7 @@ const Navbar = () => {
 
           </div>
 
-          <span className="text-base font-extrabold text-green-700 uppercase tracking-widest" style={{ fontFamily: "'Georgia', serif" }}>GreenHand</span>
+          <span className="text-base font-extrabold text-green-700 tracking-widest" style={{ fontFamily: "'Georgia', serif" }}>GreenHand</span>
 
         </a>
 
@@ -118,7 +118,7 @@ const Navbar = () => {
 
             <li key={link}>
 
-              <Link to={getHref(link)} onClick={() => setMenuOpen(false)} className={`flex items-center px-4 py-3 text-sm font-semibold uppercase tracking-widest rounded-xl transition-colors duration-200 ${isActive(link) ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}> {link} </Link>
+              <Link to={getHref(link)} onClick={() => setMenuOpen(false)} className={`flex items-center px-4 py-3 text-sm font-semibold uppercase tracking-widest rounded-xl transition-colors duration-200 ${isActive(link) ? 'text-green-700 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}> {link} </Link>
 
             </li>
           ))}

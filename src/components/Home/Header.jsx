@@ -27,8 +27,11 @@ const Header = () => {
         </div>
 
         <div className="flex flex-col items-center md:flex-row md:items-center gap-0.5 md:gap-2 font-medium tracking-wide flex-1 md:flex-none text-center">
-          <span className="text-white font-bold text-sm md:text-lg uppercase tracking-widest"> Next-Gen Agriculture Platform </span>
-          <span className="text-white text-xs md:text-md uppercase tracking-wider"> Empowering farmers with smart insights </span>
+          
+          <span className="text-white font-bold text-sm md:text-lg tracking-widest"> Next-Gen Agriculture Platform </span>
+          
+          <span className="text-white font-semibold text-xs md:text-md tracking-wider"> Empowering farmers with smart insights </span>
+        
         </div>
 
         <a href="tel:+918697544131" className="hidden md:block text-white font-bold px-4 py-1.5 rounded transition-colors duration-200 tracking-wide text-md"> +91 86975 44131 </a>

@@ -240,13 +240,13 @@ const Chatbot = () => {
 
             <div className="flex-1 min-w-0">
 
-              <div className="font-bold text-white text-sm tracking-widest uppercase" style={{ fontFamily: "'Georgia', serif" }} > GreenHand Assistant </div>
+              <div className="font-bold text-white text-sm tracking-widest" style={{ fontFamily: "'Georgia', serif" }} > GreenHand Assistant </div>
 
               <div className="flex items-center gap-1.5 mt-0.5">
 
                 <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
 
-                <span className="text-white/80 text-xs tracking-wide uppercase"> Online · Agriculture Expert </span>
+                <span className="text-white/80 text-xs tracking-wide "> Online · Agriculture Expert </span>
 
               </div>
             </div>
