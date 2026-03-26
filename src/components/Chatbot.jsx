@@ -147,7 +147,7 @@ const formatMessage = (text) => {
 const TypingIndicator = () => (
   <div className="flex items-end gap-2 mb-3">
   
-    <div className="w-7 h-7 rounded-full bg-green-600 flex items-center justify-center text-xs flex-shrink-0 text-white">🌿</div>
+    <div className="w-7 h-7 rounded-full bg-green-800 flex items-center justify-center text-xs flex-shrink-0 text-white">🌿</div>
   
     <div className="bg-white border border-green-200 rounded-2xl rounded-bl-none px-4 py-3 shadow-sm">
   
@@ -265,7 +265,7 @@ const Chatbot = () => {
                   
                   <div className="flex items-end gap-2">
                   
-                    <div className="w-7 h-7 rounded-full bg-green-600 border border-green-500 flex items-center justify-center text-xs flex-shrink-0 text-white"> 🌿 </div>
+                    <div className="w-7 h-7 rounded-full bg-green-800 border border-green-500 flex items-center justify-center text-xs flex-shrink-0 text-white"> 🌿 </div>
 
                     <div className="max-w-[75%] sm:max-w-[80%] rounded-2xl rounded-bl-none px-4 py-3 text-sm leading-relaxed shadow-sm border border-green-100" style={{ background: "#fff", color: "#374151" }}> {formatMessage(msg.text)} </div>
 
