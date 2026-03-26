@@ -1,31 +1,18 @@
-// src/pages/Login.jsx
-import { useState } from "react";
-import { login } from "../services/authService";
-import { useNavigate } from "react-router-dom";
+import React from 'react'
+import LoginComponent from '../components/LoginComponent'
+import Header from '../components/Home/Header'
+import Navbar from '../components/Home/Navbar'
+import Footer from '../components/Home/Footer'
 
-export default function Login() {
-  const [form, setForm] = useState({ email: "", password: "" });
-  const navigate = useNavigate();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await login(form);
-      alert("Login successful");
-      navigate("/dashboard");
-    } catch (err) {
-      alert(err.response?.data?.detail || "Invalid credentials");
-    }
-  };
-
+const Login = () => {
   return (
     <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input placeholder="Email" onChange={e => setForm({...form, email: e.target.value})}/>
-        <input type="password" placeholder="Password" onChange={e => setForm({...form, password: e.target.value})}/>
-        <button>Login</button>
-      </form>
+      <Header />
+      <Navbar />
+      <LoginComponent />
+      <Footer />
     </div>
-  );
+  )
 }
+
+export default Login
