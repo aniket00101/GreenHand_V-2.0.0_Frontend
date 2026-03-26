@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -53,7 +54,7 @@ const Navbar = () => {
 
               <li key={link}>
 
-                <a href={getHref(link)} className={`relative px-5 py-2 text-[13px] font-bold uppercase tracking-[0.1em] rounded-lg transition-all duration-200 ${isActive(link) ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}>
+                <Link to={getHref(link)} className={`relative px-5 py-2 text-[13px] font-bold uppercase tracking-[0.1em] rounded-lg transition-all duration-200 ${isActive(link) ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}>
 
                   {link}
 
@@ -61,7 +62,7 @@ const Navbar = () => {
                     <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-green-600 rounded-full" />
 
                   )}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -117,7 +118,7 @@ const Navbar = () => {
 
             <li key={link}>
 
-              <a href={getHref(link)} onClick={() => setMenuOpen(false)} className={`flex items-center px-4 py-3 text-sm font-semibold uppercase tracking-widest rounded-xl transition-colors duration-200 ${isActive(link) ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}> {link} </a>
+              <Link to={getHref(link)} onClick={() => setMenuOpen(false)} className={`flex items-center px-4 py-3 text-sm font-semibold uppercase tracking-widest rounded-xl transition-colors duration-200 ${isActive(link) ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}> {link} </Link>
 
             </li>
           ))}
