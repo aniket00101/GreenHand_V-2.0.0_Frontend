@@ -1,6 +1,8 @@
 import React from "react";
-// For icons, you can use lucide-react or heroicons. 
-// If you don't have them, the text version is still styled here.
+import Aniket from '../assets/Team/aniket.jpeg'
+import Sarnendu from '../assets/Team/sarnendu.jpg'
+import Monalisa from '../assets/Team/monalisa.jpg'
+import Aachal from '../assets/Team/aachal.jpg'
 
 const TeamSection = () => {
   const team = [
@@ -8,25 +10,25 @@ const TeamSection = () => {
       name: "Aniket Das",
       role: "FullStack + Ml Developer",
       bio: "Develops AI-powered platforms for smart, efficient, and sustainable farming solutions.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
+      image: Aniket,
     },
     {
       name: "Sarnendu Chattopadhyay",
       role: "Ml Developer",
       bio: "Builds predictive models to improve crop yield and farming decisions.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400",
+      image: Sarnendu,
     },
     {
       name: "Monalisha Maity",
       role: "FullStack Developer",
       bio: "Creates intuitive interfaces connecting farmers with modern digital agricultural tools.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
+      image: Monalisa,
     },
     {
       name: "Aachal Kumari",
       role: "FullStack Developer",
       bio: "Designs scalable backend systems supporting real-time smart farming applications efficiently.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+      image: Aachal,
     },
   ];
 
