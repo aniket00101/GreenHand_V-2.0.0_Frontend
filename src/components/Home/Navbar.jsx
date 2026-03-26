@@ -89,7 +89,7 @@ const Navbar = () => {
 
         <a href="/" className="flex items-center gap-2 group">
 
-          <div className="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center shadow group-hover:bg-green-700 transition-colors duration-200">
+          <div className="w-9 h-9 rounded-xl bg-green-800 flex items-center justify-center shadow group-hover:bg-green-700 transition-colors duration-200">
 
             <span className="text-lg">🌿</span>
 
