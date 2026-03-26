@@ -99,14 +99,6 @@ const HowItWorks = () => {
     <section className="w-full bg-[#f7faf7] py-20 px-6 lg:px-10">
 
       <div className="max-w-6xl mx-auto text-center mb-16">
-        
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-green-200 bg-white shadow-sm mb-5">
-        
-          <span className="w-2 h-2 rounded-full bg-green-500" />
-        
-          <span className="text-green-700 text-xs font-bold uppercase tracking-[0.2em]" style={{ fontFamily: "'Georgia', serif" }}> How It Works </span>
-        
-        </div>
 
         <h2 className="text-4xl sm:text-5xl font-extrabold text-green-900 mb-4 leading-tight" style={{ fontFamily: "'Georgia', serif" }}>
           From Sign Up to <span className="text-green-600">First Harvest</span>

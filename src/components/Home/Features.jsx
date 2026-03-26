@@ -14,7 +14,6 @@ const features = [
       'Leverage AI to predict the best crops suited for your soil type, region, and season. Make data-driven planting decisions with confidence.',
     image: f1,
     tag: 'AI Powered',
-    href: '/feature/crop-prediction',
   },
   {
     label: 'Crop Price Forecast',
@@ -22,7 +21,6 @@ const features = [
       'Stay ahead of the market with real-time crop price predictions. Know when to sell and maximize your profit margins every season.',
     image: f2,
     tag: 'Market Insights',
-    href: '/feature/crop-price',
   },
   {
     label: 'Yield Analysis',
@@ -30,7 +28,6 @@ const features = [
       'Get accurate yield estimates before harvest. Analyze historical data and current conditions to plan storage, logistics, and sales.',
     image: f3,
     tag: 'Data Driven',
-    href: '/feature/yield-analysis',
   },
   {
     label: 'Fertilizer Analysis',
@@ -38,7 +35,6 @@ const features = [
       'Get smart fertilizer recommendations tailored to your soil nutrients. Reduce costs and improve crop health with precision inputs.',
     image: f4,
     tag: 'Soil Health',
-    href: '/feature/fertilizer',
   },
   {
     label: 'AI Chatbot',
@@ -46,7 +42,6 @@ const features = [
       'Ask anything, anytime. Our 24/7 farming assistant answers your questions about crops, weather, diseases, and best practices instantly.',
     image: f5,
     tag: '24/7 Support',
-    href: '/feature/chatbot',
   },
   {
     label: 'Weather Forecast',
@@ -54,7 +49,6 @@ const features = [
       'Access hyper-local, real-time weather data for your farm. Plan irrigation, spraying, and harvesting around accurate forecasts.',
     image: f6,
     tag: 'Real-Time',
-    href: '/feature/weather',
   },
 ]
 
@@ -70,14 +64,6 @@ const Features = () => {
     <section className="w-full bg-[#f7faf7] py-20 px-6 lg:px-10">
 
       <div className="max-w-6xl mx-auto text-center mb-16">
-        
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-green-200 bg-white shadow-sm mb-5">
-        
-          <span className="w-2 h-2 rounded-full bg-green-500" />
-        
-          <span className="text-green-700 text-xs font-bold uppercase tracking-[0.2em]" style={{ fontFamily: "'Georgia', serif" }}>What We Offer</span>
-        
-        </div>
 
         <h2 className="text-4xl sm:text-5xl font-extrabold text-green-900 mb-4 leading-tight" style={{ fontFamily: "'Georgia', serif" }}> Smart Tools for 
           <span className="text-green-600">Every Farmer</span>
@@ -132,7 +118,7 @@ const Features = () => {
                 
                 return (
                 
-                  <Link to={f.href} key={f.label} onMouseEnter={() => setHovered(fi)} onMouseLeave={() => setHovered(null)} className="relative rounded-3xl overflow-hidden flex-1 min-h-[165px] shadow-sm cursor-pointer">
+                  <Link to="/" key={f.label} onMouseEnter={() => setHovered(fi)} onMouseLeave={() => setHovered(null)} className="relative rounded-3xl overflow-hidden flex-1 min-h-[165px] shadow-sm cursor-pointer">
                   
                     <img src={f.image} alt={f.label} className="absolute inset-0 w-full h-full object-cover" style={{ transform: isH ? 'scale(1.05)' : 'scale(1)', transition: 'transform 0.45s ease' }}/>
                   
