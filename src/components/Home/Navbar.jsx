@@ -54,15 +54,8 @@ const Navbar = () => {
 
               <li key={link}>
 
-                <Link to={getHref(link)} className={`relative px-5 py-2 text-[13px] font-bold uppercase tracking-[0.1em] rounded-lg transition-all duration-200 ${isActive(link) ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}>
+                <Link to={getHref(link)} className={`relative px-5 py-2 text-[13px] font-bold uppercase tracking-[0.1em] rounded-lg transition-all duration-200 ${isActive(link) ? 'text-green-700 bg-green-200' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}> {link} </Link>
 
-                  {link}
-
-                  {isActive(link) && (
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-green-600 rounded-full" />
-
-                  )}
-                </Link>
               </li>
             ))}
           </ul>
