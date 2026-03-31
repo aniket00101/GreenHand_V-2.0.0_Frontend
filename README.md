@@ -37,7 +37,7 @@ Real-time weather fetching via **OpenWeatherMap** to help farmers plan irrigatio
 
 * **Backend:** FastAPI (Python)
 * **Machine Learning:** Scikit-learn (Random Forest, XGBoost, etc.)
-* **Generative AI:** Groq Cloud SDK (Llama 3.1-8b-instant)
+* **Generative AI:** Groq Cloud SDK
 * **API Client:** HTTPX (Asynchronous requests)
 * **Validation:** Pydantic (Strict data typing)
 
