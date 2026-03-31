@@ -100,19 +100,19 @@ export default function Dashboard() {
 
             <div className="flex items-center justify-start flex-shrink-0">
 
-              <div  className="flex items-center gap-2.5 group">
+              <div className="flex items-center gap-2.5 group">
                 <div className="w-10 h-10 rounded-xl bg-green-800 flex items-center justify-center shadow group-hover:bg-green-700 transition-colors duration-200">
 
                   <span className="text-xl">🌿</span>
 
                 </div>
 
-                <h2 className="text-2xl font-extrabold text-green-800" style={{ fontFamily: "'Georgia', serif" }}> 
-                  
-                  Welcome{" "}  <span className="text-green-600">{user?.name ?? "Farmer"}</span> 
-                
+                <h2 className="text-2xl font-extrabold text-green-800" style={{ fontFamily: "'Georgia', serif" }}>
+
+                  Welcome{" "}  <span className="text-green-600">{user?.name ?? "Farmer"}</span>
+
                 </h2>
-                
+
               </div>
             </div>
 
@@ -128,15 +128,8 @@ export default function Dashboard() {
 
                     <li key={f.key}>
 
-                      <button onClick={() => setActiveKey(isActive ? null : f.key)} title={f.label} className={`relative flex items-center gap-1.5 px-4 py-2 text-[13px] font-bold uppercase tracking-[0.1em] rounded-lg transition-all duration-200 whitespace-nowrap border ${isActive ? "text-green-700 bg-green-100 border-green-300 shadow-md shadow-green-100" : "text-gray-500 border-transparent hover:text-green-600 hover:bg-green-50"}`}>
-
-                        {f.label}
-
-                        {isActive && (
-                          <span className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 w-4 h-[3px] rounded-full bg-green-600" />
-                        )}
-
-                      </button>
+                      <button onClick={() => setActiveKey(isActive ? null : f.key)} title={f.label} className={`relative flex items-center gap-1.5 px-4 py-2 text-[13px] font-bold uppercase tracking-[0.1em] rounded-lg transition-all duration-200 whitespace-nowrap border ${isActive ? "text-green-700 bg-green-100 border-green-300 shadow-md shadow-green-100" : "text-gray-500 border-transparent hover:text-green-600 hover:bg-green-50"}`}>  {f.label}  </button>
+                      
                     </li>
                   );
                 })}
@@ -144,7 +137,7 @@ export default function Dashboard() {
             </div>
 
             <div className="flex items-center justify-end gap-3 flex-shrink-0">
-              
+
               <button onClick={handleLogout} className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-500 text-white text-[13px] font-bold uppercase tracking-[0.1em] hover:bg-red-600 active:scale-95 transition-all duration-200 shadow-md hover:shadow-lg"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor">
@@ -158,45 +151,45 @@ export default function Dashboard() {
           </div>
 
           <div className="flex md:hidden items-center justify-between h-[64px] px-5">
-            
-            <a href="/" className="flex items-center gap-2 group">
-            
+
+            <div className="flex items-center gap-2 group">
+
               <div className="w-9 h-9 rounded-xl bg-green-800 flex items-center justify-center shadow group-hover:bg-green-700 transition-colors duration-200">
-            
+
                 <span className="text-lg">🌿</span>
-            
+
               </div>
-            
-              <h2 className="text-2xl font-extrabold text-green-800" style={{ fontFamily: "'Georgia', serif" }}> 
-                
-                Welcome{" "} <span className="text-green-600">{user?.name ?? "Farmer"} </span> 
-              
+
+              <h2 className="text-2xl font-extrabold text-green-800" style={{ fontFamily: "'Georgia', serif" }}>
+
+                Welcome{" "} <span className="text-green-600">{user?.name ?? "Farmer"} </span>
+
               </h2>
 
-            </a>
-            
+            </div>
+
             <button className="w-10 h-10 flex flex-col items-center justify-center gap-[5px] rounded-xl hover:bg-green-50 transition-colors" onClick={() => setMenuOpen((p) => !p)} aria-label="Toggle menu">
 
               <span className={`block w-5 h-[2px] bg-green-600 rounded-full transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-              
+
               <span className={`block w-5 h-[2px] bg-green-600 rounded-full transition-all duration-300 ${menuOpen ? "opacity-0 scale-x-0" : ""}`} />
-              
+
               <span className={`block w-5 h-[2px] bg-green-600 rounded-full transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
-            
+
             </button>
           </div>
 
           <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out border-t border-green-100 ${menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-            
+
             <div className="px-6 py-4 flex flex-col gap-1">
-            
+
               {FEATURES.map((f) => {
-            
-            const isActive = activeKey === f.key;
-            
-            return (
-            
-              <button key={f.key} onClick={() => { setActiveKey(isActive ? null : f.key); setMenuOpen(false); }} className={`flex items-center gap-3 px-4 py-3 text-sm font-semibold uppercase tracking-widest rounded-xl transition-colors duration-200 w-full text-left ${isActive ? "text-green-700 bg-green-100" : "text-gray-500 hover:text-green-600 hover:bg-green-50"}`}> {f.icon} {f.label} </button>
+
+                const isActive = activeKey === f.key;
+
+                return (
+
+                  <button key={f.key} onClick={() => { setActiveKey(isActive ? null : f.key); setMenuOpen(false); }} className={`flex items-center gap-3 px-4 py-3 text-sm font-semibold uppercase tracking-widest rounded-xl transition-colors duration-200 w-full text-left ${isActive ? "text-green-700 bg-green-100" : "text-gray-500 hover:text-green-600 hover:bg-green-50"}`}> {f.icon} {f.label} </button>
                 );
               })}
 
@@ -236,7 +229,7 @@ export default function Dashboard() {
       `}</style>
 
       </div>
-      
+
       <Footer />
     </>
   );
