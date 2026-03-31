@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import weatherImg from "../assets/f6.webp"; // replace with your actual image path
+import weatherImg from "../assets/f6.webp"; 
 
 const API_URL = `${import.meta.env.VITE_API_BASE_URL}/weather`;
 
