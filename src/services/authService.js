@@ -1,4 +1,3 @@
-// src/services/authService.js
 import axios from "../utils/axiosInstance";
 
 export const signup = (data) => axios.post("/auth/signup", data);
