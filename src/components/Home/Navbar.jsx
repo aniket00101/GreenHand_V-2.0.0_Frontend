@@ -13,8 +13,9 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const navLinks = ['Home', 'About', 'Feature', 'Feedback', 'Team']
-
+  // const navLinks = ['Home', 'About', 'Feature', 'Feedback', 'Team']
+  const navLinks = ['Home', 'About', 'Feature', 'Feedback']
+  
   const getHref = (link) => (link === 'Home' ? '/' : `/${link.toLowerCase()}`)
 
   // Determine active link from current URL path
