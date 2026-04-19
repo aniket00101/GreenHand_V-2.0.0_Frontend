@@ -30,6 +30,7 @@ export default function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<h1>404 Error</h1>} />
       </Routes>
       <Chatbot />
     </BrowserRouter>
