@@ -1,18 +1,31 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import FeedbackPage from "./pages/FeedbackPage";
-import Chatbot from "./components/Chatbot";
 import About from "./pages/About";
 import FeaturesPage from "./pages/Features";
 import Team from "./pages/Team";
+import Error404 from "./pages/Error404";
+import Chatbot from "./components/Chatbot";
+import AdminDashboard from "./admin/adminDashboard";
+import AdminProtectedRoute from "./components/AdminProtectedRoute";
 
-export default function App() {
+function AppContent() {
+  const location = useLocation();
+
+  const hideChatbotRoutes = ["/login", "/signup"];
+
+  const validRoutes = ["/", "/login", "/signup", "/feedback", "/about", "/feature", "/team", "/dashboard",];
+
+  const is404 = !validRoutes.includes(location.pathname);
+
+  const shouldHideChatbot = hideChatbotRoutes.includes(location.pathname) || is404;
+
   return (
-    <BrowserRouter>
+    <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -30,10 +43,26 @@ export default function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="*" element={<h1>404 Error</h1>} />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <AdminProtectedRoute>
+              <AdminDashboard />
+            </AdminProtectedRoute>
+          }
+        />
+        <Route path="*" element={<Error404 />} />
       </Routes>
-      <Chatbot />
+
+      {!shouldHideChatbot && <Chatbot />}
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
-    
   );
 }
